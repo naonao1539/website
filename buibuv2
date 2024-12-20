@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Server Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="neon-header">
+        <h1>Welcome to buibuiV2</h1>
+    </header>
+    <div class="container">
+        <div class="stats fade-in">
+            <div class="stat neon-box">
+                <h2 id="total-members">--</h2>
+                <p>Total Members</p>
+            </div>
+            <div class="stat neon-box">
+                <h2 id="online-members">--</h2>
+                <p>Online</p>
+            </div>
+            <div class="stat neon-box" id="details-button-container">
+                <button class="details-btn" onclick="toggleDetails()">View Details</button>
+                <div id="details-info" class="hidden">
+                    <p>Testmessege.</p>
+                    <!-- 追加の詳細情報をここに記入できます -->
+                </div>
+            </div>
+        </div>
+        <div class="cta fade-in">
+            <a href="https://discord.gg/buibuiv2" target="_blank">Join Now</a>
+        </div>
+    </div>
+    <footer class="fade-in">
+        <p>&copy; 2024 Buibui server!. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDetails() {
+            var details = document.getElementById("details-info");
+            
+            // 詳細情報が隠れていれば表示、表示されていれば隠す
+            if (details.classList.contains("hidden")) {
+                details.classList.remove("hidden");
+                details.classList.add("show");
+            } else {
+                details.classList.remove("show");
+                details.classList.add("hidden");
+            }
+        }
+    </script>
+</body>
+</html>
